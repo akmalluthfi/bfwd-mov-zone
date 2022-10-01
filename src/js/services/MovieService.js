@@ -20,6 +20,7 @@ export default class MovieService {
         return;
       }
       try {
+        this.element.loadEffect();
         const movies = await this.repository.search(s);
         this.renderMovie(movies);
       } catch (error) {
