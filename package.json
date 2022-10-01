@@ -2,16 +2,20 @@
   "name": "movzone",
   "version": "1.0.0",
   "description": "Simple website for search movie using omdbapi",
+  "homepage": "https://akmalluthfi.github.io/MovZone",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "webpack serve --config webpack.dev.js",
-    "build:prod": "webpack --config webpack.prod.js"
+    "build:prod": "webpack --config webpack.prod.js",
+    "predeploy": "npm run build:prod",
+    "deploy": "gh-pages -d build"
   },
   "author": "akmalluthfi",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
+    "gh-pages": "^4.0.0",
     "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
