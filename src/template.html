@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MovZone App</title>
   </head>
-  <body>
+  <body class="d-flex flex-column vh-100">
     <!-- Nav -->
     <header class="container">
       <nav class="navbar">
@@ -16,50 +16,31 @@
       </nav>
 
       <!-- search bar -->
-      <div class="mb-3">
+      <div class="my-3 col-md-8">
         <input
           type="text"
           class="form-control"
           id="search"
           placeholder="&#x1F50E;&#xFE0E; Search..."
+          autofocus
         />
       </div>
     </header>
     <!-- end nav -->
 
     <!-- main -->
-    <main class="container my-4">
-      <div class="row">
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3" id="card-item">
-          <img
-            src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
-            alt=""
-            class="img-fluid rounded-2 mb-2"
-          />
-          <h6 class="card-title mb-1">
-            The Devil The Corp And The Mafia in the world
-          </h6>
-          <h6 class="card-subtitle mb-1 text-muted">2021</h6>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-          <img
-            src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
-            alt=""
-            class="img-fluid rounded-3 mb-1"
-          />
-          <h6 class="card-title mb-1">The Avengers</h6>
-          <h6 class="card-subtitle mb-1 text-muted">2021</h6>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-          <img
-            src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
-            alt=""
-            class="img-fluid rounded-3 mb-1"
-          />
-          <h6 class="card-title mb-1">The Avengers</h6>
-          <h6 class="card-subtitle mb-1 text-muted">2021</h6>
-        </div>
-      </div>
+    <main class="container my-3 col">
+      <m-card-list></m-card-list>
+      <!-- <h4 class="text-center">-- Movie Not Found --</h4> -->
     </main>
+
+    <footer class="text-bg-primary" style="--bs-bg-opacity: 0.7">
+      <p class="m-0 p-3 text-center">
+        Created with &#10084; by
+        <a class="link-light" href="https://github.com/akmalluthfi"
+          >akmalluthfi</a
+        >
+      </p>
+    </footer>
   </body>
 </html>

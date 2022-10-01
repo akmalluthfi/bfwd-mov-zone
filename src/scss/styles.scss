@@ -1,16 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 @import 'bootstrap/scss/bootstrap';
 
-body {
+* {
   font-family: 'Poppins', sans-serif;
+}
+
+main {
   max-width: 992px;
   margin: auto;
 }
 
-#card-item > .card-title {
+m-card > .card-title {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+.navbar-brand {
+  color: $primary;
+}
+
+// .error {
+//   display: flex;
+//   min-height: 100vh - 720px;
+// }
