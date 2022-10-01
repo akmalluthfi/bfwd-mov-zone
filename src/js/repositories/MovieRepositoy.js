@@ -1,5 +1,5 @@
 export default class MovieRepository {
-  constructor(base = 'http://www.omdbapi.com', apikey = 'dca61bcc') {
+  constructor(base = 'https://www.omdbapi.com', apikey = 'dca61bcc') {
     this.url = base + '?apikey=' + apikey;
   }
 
