@@ -1,4 +1,6 @@
 import './MCard.js';
+import notFoundImage from '../../img/not-found.svg';
+import waitingToSearchImage from '../../img/waiting-to-search.svg';
 
 class MCardList extends HTMLElement {
   connectedCallback() {
@@ -8,7 +10,12 @@ class MCardList extends HTMLElement {
       'align-items-center',
       'justify-content-center'
     );
-    this.innerHTML = '<h4 class="text-center">Type Something</h4>';
+    this.innerHTML = `
+      <div class="text-center">
+        <img class="img-fluid" src="${waitingToSearchImage}" alt="Waiting to search!" style="max-width: 150px">
+        <p class="pt-4">Waiting to search!</p>
+      </div>
+    `;
   }
 
   /**
@@ -35,15 +42,17 @@ class MCardList extends HTMLElement {
 
   renderError(message) {
     this.classList.add('h-100', 'align-items-center', 'justify-content-center');
-    this.innerHTML = `<h4 class="text-center">${message}</h4>`;
+    this.innerHTML = `
+    <div class="text-center">
+      <img class="img-fluid" src="${notFoundImage}" alt="${message}" style="max-width: 150px">
+      <p class="pt-4">${message}</p>
+    </div>
+    `;
   }
 
   loadEffect() {
-    this.innerHTML = `
-      <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-    `;
+    this.classList.add('h-100', 'align-items-center', 'justify-content-center');
+    this.innerHTML = '<p class="text-center">Searching ...</p>';
   }
 }
 

@@ -5,31 +5,29 @@
   "homepage": "https://akmalluthfi.github.io/MovZone",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dev": "webpack serve --config webpack.dev.js",
-    "build:prod": "webpack --config webpack.prod.js",
+    "serve": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "build:dev": "webpack --config webpack.dev.js",
     "predeploy": "npm run build:prod",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "author": "akmalluthfi",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
-    "gh-pages": "^4.0.0",
+    "lodash.debounce": "^4.0.8",
     "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.3",
-    "autoprefixer": "^10.4.11",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
-    "postcss-loader": "^7.0.1",
     "sass": "^1.54.9",
     "sass-loader": "^13.0.2",
-    "style-loader": "^3.3.1",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"

@@ -3,6 +3,8 @@
 
 * {
   font-family: 'Poppins', sans-serif;
+  font-size: 14px !important;
+  color: #58585d;
 }
 
 main {
@@ -19,10 +21,18 @@ m-card > .card-title {
 }
 
 .navbar-brand {
-  color: $primary;
+  color: $primary !important;
+  font-size: 32px !important;
 }
 
-// .error {
-//   display: flex;
-//   min-height: 100vh - 720px;
-// }
+@media (min-width: 600px) {
+  .navbar-brand {
+    font-size: 48px !important;
+  }
+}
+
+#search {
+  padding: 12px 16px;
+  max-width: 550px;
+  margin: auto;
+}

@@ -20,14 +20,6 @@ module.exports = {
             loader: 'css-loader',
           },
           {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: () => [require('autoprefixer')],
-              },
-            },
-          },
-          {
             loader: 'sass-loader',
           },
         ],
@@ -41,6 +33,10 @@ module.exports = {
             presets: ['@babel/preset-env'],
           },
         },
+      },
+      {
+        test: /\.svg/,
+        type: 'asset/inline',
       },
     ],
   },
