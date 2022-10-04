@@ -11,7 +11,7 @@ export default class MovieService {
 
   async search(s) {
     if (s.length === 0) {
-      this.renderWaitingToSearch;
+      this.renderWaitingToSearch();
       return;
     }
     try {
