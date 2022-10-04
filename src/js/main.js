@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchEl = document.getElementById('search');
   searchEl.addEventListener(
     'input',
-    debounce(() => {
+    debounce(function () {
       const movieService = new MovieService();
       movieService.search(this.value);
     }, 500)
