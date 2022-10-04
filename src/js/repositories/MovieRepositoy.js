@@ -9,4 +9,11 @@ export default class MovieRepository {
     if (result.Response === 'False') throw new Error(result.Error);
     return result.Search;
   }
+
+  async find(id) {
+    const response = await fetch(this.url + '&i=' + id);
+    const result = await response.json();
+    if (result.Response === 'False') throw new Error(result.Error);
+    return result;
+  }
 }

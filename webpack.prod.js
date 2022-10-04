@@ -9,6 +9,7 @@ module.exports = merge(common, {
     filename: 'main-[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    assetModuleFilename: 'img/[name]-[hash][ext]',
   },
   plugins: [
     new MiniCssExtractPlugin({

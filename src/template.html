@@ -32,9 +32,54 @@
 
     <!-- main -->
     <main class="container my-3 col">
-      <m-card-list></m-card-list>
-      <!-- <h4 class="text-center">-- Movie Not Found --</h4> -->
+      <div
+        class="row h-100 align-items-center justify-content-center"
+        id="movie-list"
+      >
+        <div class="text-center">
+          <img
+            class="img-fluid"
+            src="./img/waiting-to-search.svg"
+            alt="Waiting to search!"
+            style="max-width: 150px"
+          />
+          <p class="pt-4">Waiting to search!</p>
+        </div>
+      </div>
     </main>
+
+    <!-- Modal -->
+    <div
+      class="modal fade modal-lg"
+      id="showMovie"
+      tabindex="-1"
+      aria-labelledby="showMovieLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="showMovieLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="text-bg-primary" style="--bs-bg-opacity: 0.7">
       <p class="m-0 p-3 text-center text-white">
